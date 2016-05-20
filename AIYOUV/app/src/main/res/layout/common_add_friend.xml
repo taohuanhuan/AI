@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/no_color"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/iuv"
+        android:gravity="center"
+        android:text="添加好友"
+        android:textColor="@color/iuv_txt_title"
+        android:textSize="22sp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/iuv_bg"
+        android:orientation="vertical">
+    <LinearLayout
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_friends_ico2"/>
+        <EditText
+            android:id="@+id/frind_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="11"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/item_text"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:hint="请输入手机号码"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="5"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:textColor="@color/item_text"
+        android:text="搜索"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:background="@color/iuv_bg"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <app.cn.aiyouv.www.widget.CircleImageView
+                android:id="@+id/ico"
+                android:src="@drawable/fs_ico"
+                app:border_color="@color/iuv"
+                app:border_width="2dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/default_text"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+                android:textColor="@color/item_text"
+            android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+            android:text="添加"/>
+            <TextView
+                android:id="@+id/ret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/item_text"
+                android:textSize="20sp"
+                android:text="返回"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/actionsheet_single_selector"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#d9923c"
+        android:textSize="16sp" />
+
+</LinearLayout>

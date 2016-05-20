@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/iuv_bg"
+
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/iuv" >
+
+        <LinearLayout
+            android:id="@+id/title_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/title_back"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="我的券包"
+            android:textColor="@color/iuv_txt_title"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/shared"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="分享"
+            android:textColor="@color/subscribe_item_drag_bg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RadioGroup
+        android:id="@+id/market_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/market_group_item0"
+            style="@style/market_category_radiobtn"
+                android:drawableLeft="@drawable/jb_ico2_hov"
+            android:paddingLeft="15dp"
+            android:tag="no"
+            android:text="未消费" />
+
+        <RadioButton
+            android:id="@+id/market_group_item1"
+            style="@style/market_category_radiobtn"
+            android:drawableLeft="@drawable/jb_ico2"
+            android:paddingLeft="15dp"
+            android:tag="yes"
+            android:text="已消费" />
+
+        <RadioButton
+            android:id="@+id/market_group_item2"
+            style="@style/market_category_radiobtn"
+            android:drawableLeft="@drawable/jb_ico3"
+            android:paddingLeft="15dp"
+            android:tag="share"
+            android:text="可分享" />
+    </RadioGroup>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/normal_diver"/>
+    <app.cn.aiyouv.www.widget.PullToRefreshView
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/iuv_txt_title"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/tickte_lists"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/no_color"
+            android:cacheColorHint="@color/no_color"
+            android:divider="@color/normal_diver"
+            android:dividerHeight="5dp" />
+    </app.cn.aiyouv.www.widget.PullToRefreshView>
+
+</LinearLayout>

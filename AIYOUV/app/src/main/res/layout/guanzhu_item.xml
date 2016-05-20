@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.cn.aiyouv.www.widget.ScrollLinerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/item0_img"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="类目"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/iuv"/>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标记"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/item_text"/>
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作者"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"
+                android:textColor="@color/item_text"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="2dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/iuv"
+                    android:layout_marginTop="10dp"
+                    android:textSize="13sp"
+                    android:visibility="invisible"
+                    android:text="@string/content1_item0_txt"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="2015-11-12"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/delete_action"
+        android:layout_width="@dimen/delete_action_len"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="7dip"
+        android:text="删除"
+        android:textColor="@color/iuv_txt_title"
+        android:textSize="18dip" />
+</app.cn.aiyouv.www.widget.ScrollLinerLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iuv_bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"/>
+	<FrameLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="58dp">
+        <RadioGroup
+            android:id="@+id/main_bottom_rtns"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/main_bottom_rtn0"
+                android:drawableTop="@drawable/main_bottom_item0"
+                style="@style/main_bottom_btn_b"
+                android:text="首页" />
+
+            <RadioButton
+                android:id="@+id/main_bottom_rtn1"
+                android:drawableTop="@drawable/main_bottom_item1"
+                style="@style/main_bottom_btn_b"
+                android:text="优惠" />
+
+            <RadioButton
+                android:id="@+id/main_bottom_rtn2"
+                android:drawableTop="@drawable/main_bottom_item2"
+                style="@style/main_bottom_btn_a"
+                android:enabled="false"
+                android:visibility="invisible"
+                android:clickable="true"
+                android:focusable="false"
+                 />
+            <RadioButton
+                android:id="@+id/main_bottom_rtn3"
+                android:drawableTop="@drawable/main_bottom_item3"
+                style="@style/main_bottom_btn_b"
+                android:text="店家秀" />
+
+            <RadioButton
+                android:id="@+id/main_bottom_rtn4"
+                android:drawableTop="@drawable/main_bottom_item4"
+                style="@style/main_bottom_btn_b"
+                android:text="用户" />
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:id="@+id/click"
+                android:drawableTop="@drawable/main_bottom_item2"
+                style="@style/main_bottom_btn_c1"
+                android:clickable="true"
+                android:focusable="false"
+                />
+        </LinearLayout>
+
+
+	</FrameLayout>
+   
+
+</LinearLayout>

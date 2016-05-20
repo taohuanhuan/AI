@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/semi_transparent_w"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <app.cn.aiyouv.www.widget.CircleImageView
+            android:id="@+id/ico"
+            android:src="@drawable/fs_ico"
+            app:border_color="@color/iuv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="4dp"
+            app:border_width="1dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tag"
+            android:background="@color/iuv_bg"
+            android:layout_width="wrap_content"
+
+            android:layout_toRightOf="@+id/ico"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:textColor="@color/item_text"
+            android:text="测试"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="6dp"
+            android:layout_marginTop="4dp"
+            android:text="回复"
+            android:textColor="@color/item_text"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="36dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/item_text"
+            android:text="测试"
+            android:background="@color/iuv_bg"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_margin="4dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/item_text"/>
+    </RelativeLayout>
+</LinearLayout>

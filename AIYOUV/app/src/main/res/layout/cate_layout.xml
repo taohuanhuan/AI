@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/iuv_txt_title"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <app.cn.aiyouv.www.widget.AutoWrapLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+  <TextView
+                android:id="@+id/vuforia_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/subscribe_item_bg"
+                android:gravity="center"
+                android:minHeight="38.0dip"
+                android:text="搜索"
+                android:layout_gravity="center"
+                android:minWidth="90.0dip"
+                android:textColor="@color/subscribe_item_text_color"
+                android:textSize="14.0sp" />
+            <CheckBox
+                android:button="@null"
+                android:id="@+id/cate0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/subscribe_item_bg"
+                android:gravity="center"
+                android:minHeight="38.0dip"
+                android:text="距离"
+                android:tag="distance"
+                android:layout_gravity="center"
+                android:minWidth="90.0dip"
+                android:textColor="@color/market_radiobtn_text"
+                android:textSize="14.0sp" />
+            <CheckBox
+                android:button="@null"
+                android:id="@+id/cate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/subscribe_item_bg"
+                android:gravity="center"
+                android:minHeight="38.0dip"
+                android:text="日期"
+                android:tag="createDate"
+                android:layout_gravity="center"
+                android:minWidth="90.0dip"
+                android:textColor="@color/market_radiobtn_text"
+                android:textSize="14.0sp" />
+
+            <CheckBox
+                android:button="@null"
+                android:id="@+id/cate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/subscribe_item_bg"
+                android:gravity="center"
+                android:minHeight="38.0dip"
+                android:tag="hits"
+                android:text="最热"
+                android:layout_gravity="center"
+                android:minWidth="90.0dip"
+                android:textColor="@color/market_radiobtn_text"
+                android:textSize="14.0sp" />
+            <CheckBox
+                android:button="@null"
+                android:id="@+id/cate3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/subscribe_item_bg"
+                android:gravity="center"
+                android:minHeight="38.0dip"
+                android:text="排名"
+                android:tag="dianzanMembers"
+                android:layout_gravity="center"
+                android:minWidth="90.0dip"
+                android:textColor="@color/market_radiobtn_text"
+                android:textSize="14.0sp" />
+            <CheckBox
+                android:button="@null"
+                android:id="@+id/cate4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/subscribe_item_bg"
+                android:gravity="center"
+                android:minHeight="38.0dip"
+                android:text="更新"
+                android:tag="modifyDate"
+                android:layout_gravity="center"
+                android:minWidth="90.0dip"
+                android:textColor="@color/market_radiobtn_text"
+                android:textSize="14.0sp" />
+            <TextView
+                android:id="@+id/all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/subscribe_item_bg"
+                android:gravity="center"
+                android:minHeight="38.0dip"
+                android:text="全部"
+                android:layout_gravity="center"
+                android:minWidth="90.0dip"
+                android:textColor="@color/subscribe_item_text_color"
+                android:textSize="14.0sp" />
+        </app.cn.aiyouv.www.widget.AutoWrapLinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <app.cn.aiyouv.www.widget.InScrollListView
+                    android:id="@+id/cate_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/no_color"
+                    android:cacheColorHint="@color/no_color"
+                    android:divider="@color/normal_diver"
+                    android:dividerHeight="1dp" />
+                <Button
+                    android:id="@+id/ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:ems="4"
+                    android:text="筛选"
+                    android:textSize="16sp"
+                    android:textColor="@color/iuv_txt_title"
+                    android:background="@drawable/shape_common_btn"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="58dp"/>
+
+</LinearLayout>

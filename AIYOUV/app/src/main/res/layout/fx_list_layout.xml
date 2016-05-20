@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/iuv_bg"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/iuv" >
+
+        <LinearLayout
+            android:id="@+id/title_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/title_back"
+                />
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="分享好友"
+            android:textColor="@color/iuv_txt_title"
+            android:textSize="22sp" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <Button android:textSize="15sp"
+            android:textColor="@android:color/white" android:paddingLeft="4dp"
+             android:paddingRight="4dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:gravity="center" android:id="@+id/search_button" android:background="@drawable/shape_bg_iuv_btn" android:layout_width="wrap_content" android:layout_height="35dp" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="搜索" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <RelativeLayout  android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/search_edit" android:layout_width="fill_parent" android:layout_height="40dp" android:layout_marginLeft="4dp" android:layout_toLeftOf="@+id/search_button" android:layout_centerVertical="true">
+            <ImageView android:id="@+id/clear_image" android:tag="voice" android:background="@drawable/style_lv_apt_selector2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/delete" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <EditText android:textCursorDrawable="@drawable/cur" android:textSize="16sp" android:textColor="@color/item_text" android:textColorHint="#ffc5c5c5" android:id="@+id/search_editText" android:background="@android:color/white" android:paddingRight="4.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="查找用户" android:cursorVisible="true" android:ems="10" android:singleLine="true" android:drawableLeft="@drawable/search_icon" android:drawablePadding="4dp" android:layout_toLeftOf="@+id/clear_image" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/normal_diver"
+        />
+    <app.cn.aiyouv.www.widget.PullToRefreshView
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/iuv_txt_title"
+        android:layout_height="match_parent">
+        <app.cn.aiyouv.www.widget.DelSlideListView
+            android:id="@+id/content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/no_color"
+            android:cacheColorHint="@color/no_color"
+            android:divider="@color/normal_diver"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:listSelector="@null"
+            android:dividerHeight="1dp" />
+
+    </app.cn.aiyouv.www.widget.PullToRefreshView>
+</LinearLayout>

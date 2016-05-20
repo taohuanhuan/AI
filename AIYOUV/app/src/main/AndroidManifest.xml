@@ -1,0 +1,106 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.cn.aiyouv.www">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".base.ConfigApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/ThemeActivity">
+        <activity android:name=".ui.GuanZhuActivity" />
+        <activity android:name=".ui.MyEwmActivity" />
+        <activity android:name=".pic.PublishedActivity" />
+        <activity android:name=".pic.PhotoViewsActivity" />
+        <activity android:name=".pic.PhotoViewActivity" />
+        <activity android:name=".pic.PhotoSelectActivity" />
+        <activity android:name=".ui.ArticleDetailActivity" />
+        <activity android:name=".ui.DianZanActivity" />
+        <activity android:name=".ui.MainFragmentActivity">
+
+        </activity>
+        <activity android:name=".ui.CommonWeb">
+
+
+        </activity>
+
+        <activity android:name=".ui.SettingActivity" />
+        <activity
+            android:name=".ui.Vuforia_Qr_Activity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleInstance"></activity>
+        <activity android:name=".ui.Vuforia_OK_Activity">
+
+        </activity>
+        <activity android:name=".ui.Chat_Activity" /> <!--聊天页面-->
+        <activity android:name=".ui.BNGuideActivity">
+
+        </activity>
+        <activity android:name=".ui.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.Fs_ListActivity" />
+        <activity android:name=".ui.EditPersonActivity" />
+        <activity android:name=".ui.AdverActivity" />
+        <activity android:name=".ui.MyPublishActivity" />
+        <activity android:name=".ui.TicketsManagerActivity" />
+        <activity android:name=".ui.MyEditActivity" />
+        <activity android:name=".ui.Fx_ListActivity" />
+        <activity android:name=".ui.TicketDetailActivity" />
+        <activity android:name=".ui.BillManagerActivity" />
+        <activity android:name=".ui.BillTableActivity" />
+        <activity android:name=".ui.RewardListActivity" />
+        <activity android:name=".ui.TicketsCActivity" />
+        <activity android:name=".ui.BillXchartsActivity" />
+        <activity android:name=".ui.SearchActivity" />
+        <activity android:name=".ui.DataCenterActivity" /> <!--商户数据分析-->
+        <activity android:name=".ui.MsgActivity" />         <!--消息列表-->
+        <activity android:name=".ui.FindPassActivity" />  <!--找回密码-->
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2"></action>
+            </intent-filter>
+        </service>
+
+        <!-- meta-data需要写在application中     N7qcsGiuhRxMFmiYDF4jVPvR-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="N7qcsGiuhRxMFmiYDF4jVPvR" />
+       -  Xa0Hd5zKkNrXitAcw0Ws7Vqm            fGHVIRxtBSTyISguibDXa7PZ   -->
+<!--
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="QA5UKj4e0e3BK3MRB3cTxfEL2Q4x4psw" />  -->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.cn.aiyouv.www.widget.ScrollLinerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+            <app.cn.aiyouv.www.widget.CircleImageView
+                android:id="@+id/ico"
+                android:src="@drawable/fs_ico"
+                app:border_color="@color/iuv"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                app:border_width="1dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:id="@+id/item0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ico"
+                android:text="粉丝"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/item_text"
+                android:textSize="17sp"/>
+            <ImageView
+                android:id="@+id/item1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:background="@drawable/recy_ico"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/delete_action"
+        android:layout_width="@dimen/delete_action_len"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="7dip"
+        android:text="删除"
+        android:textColor="@color/iuv_txt_title"
+        android:textSize="18dip" />
+
+</app.cn.aiyouv.www.widget.ScrollLinerLayout>

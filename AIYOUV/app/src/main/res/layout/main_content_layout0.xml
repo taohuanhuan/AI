@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/iuv">
+
+        <Button
+            android:id="@+id/left_btn"
+            style="@style/main_top_left_button" />
+
+
+        <TextView
+            android:id="@+id/cate"
+            style="@style/main_top_middle_text"
+            android:text="优惠" />
+
+        <Button
+            android:id="@+id/right_btn"
+            style="@style/main_top_right_button" />
+
+
+    </RelativeLayout>
+
+    <app.cn.aiyouv.www.widget.PullToRefreshView
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/iuv_txt_title"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/content0_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/no_color"
+            android:cacheColorHint="@color/no_color"
+            android:divider="@color/normal_diver"
+            android:dividerHeight="1dp" />
+
+
+    </app.cn.aiyouv.www.widget.PullToRefreshView>
+
+</LinearLayout>

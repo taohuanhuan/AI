@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/no_color"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/actionsheet_top_normal"
+        android:gravity="center"
+        android:text="现金打赏"
+        android:textColor="#d9923c"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@drawable/actionsheet_bottom_selector"
+        android:gravity="center"
+         >
+            <LinearLayout
+                android:id="@+id/re"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:background="@drawable/news_item_bg"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="80dp">
+                <EditText
+                    android:id="@+id/item0"
+                    android:digits="0123456789"
+                    android:maxEms="4"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:layout_width="0dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/item_text"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/send"
+                android:text="打赏"
+                android:background="@drawable/shape_bg_iuv_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:textColor="@color/iuv_txt_title"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/actionsheet_single_selector"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#d9923c"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/capture_containter"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/iuv" >
+
+        <LinearLayout
+            android:id="@+id/title_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/title_back"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="IUV"
+            android:textColor="@color/iuv_txt_title"
+            android:textSize="22sp" />
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/item0"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="@color/no_color"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/layout0"
+            android:background="@color/no_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/top_mask0"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/scan_mask"
+                android:contentDescription="@string/app_name" />
+
+
+
+            <ImageView
+                android:id="@+id/bottom_mask0"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/scan_mask"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/left_mask0"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_mask0"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/top_mask0"
+
+                android:background="@drawable/scan_mask"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/right_mask0"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_mask0"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/top_mask0"
+                android:background="@drawable/scan_mask"
+                android:contentDescription="@string/app_name" />
+            <RelativeLayout
+                android:id="@+id/capture_crop_layout0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/top_mask0"
+                android:layout_above="@id/bottom_mask0"
+                android:layout_toRightOf="@id/left_mask0"
+                android:layout_toLeftOf="@id/right_mask0"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/capture"
+                android:contentDescription="@string/app_name" >
+
+                <ImageView
+                    android:id="@+id/capture_scan_line0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/kakalib_scan_ray" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout1"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SurfaceView
+                android:id="@+id/capture_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <ImageView
+                android:id="@+id/top_mask"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/scan_mask"
+                android:contentDescription="@string/app_name" />
+
+            <RelativeLayout
+                android:id="@+id/capture_crop_layout"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/top_mask"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/capture"
+                android:contentDescription="@string/app_name" >
+
+                <ImageView
+                    android:id="@+id/capture_scan_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/kakalib_scan_ray" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/bottom_mask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/capture_crop_layout"
+                android:background="@drawable/scan_mask"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/left_mask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_mask"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/top_mask"
+                android:layout_toLeftOf="@id/capture_crop_layout"
+                android:background="@drawable/scan_mask"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/right_mask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_mask"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/top_mask"
+                android:layout_toRightOf="@id/capture_crop_layout"
+                android:background="@drawable/scan_mask"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/falsh_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:button="@null"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/content2_item0"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

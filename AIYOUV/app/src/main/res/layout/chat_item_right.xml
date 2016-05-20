@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="6.0dip"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip"
+    android:paddingTop="6.0dip" >
+
+    <TextView
+        android:id="@+id/datetime"
+        style="@style/G1_Font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="8.0dip"
+        android:background="@drawable/chat_time_block"
+        android:gravity="center_vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:text="11:11"
+        android:textColor="@color/iuv_txt_normal"
+        android:textSize="10.0sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="2.0dip"
+        android:layout_marginRight="60dp"
+        android:text="張三"
+        android:textSize="9sp"
+        android:visibility="invisible" />
+
+    <app.cn.aiyouv.www.widget.CircleImageView
+        android:id="@+id/icon"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/group_name"
+        android:layout_marginLeft="10dp"
+        app:border_color="@color/iuv"
+        app:border_width="2dp"
+        android:background="@drawable/chat_item_icon_bg_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/fs_ico" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_name"
+        android:layout_toLeftOf="@id/icon"
+        android:background="@drawable/balloon_r_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:minHeight="44.0dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/message"
+                    style="@style/B5_Font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/item_text"
+                    android:textSize="16.0sp"
+                      />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:textColor="#959595"
+                android:textSize="9sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
